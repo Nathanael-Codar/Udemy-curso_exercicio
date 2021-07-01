@@ -68,7 +68,9 @@ public class Program {
 			order.addItem(orderItem);
 		}
 		
-
+		System.out.println();
+		System.out.println("ORDER SUMMARY:");
+		System.out.println(order.toString());
 		
 		sc.close();
 	}
