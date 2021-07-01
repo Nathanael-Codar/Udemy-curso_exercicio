@@ -3,15 +3,16 @@ package entities;
 public class OrderItem {
 	private Integer quantity;
 	private Double price;
-	private String product;
+	private Product product;
+	
 	
 	public OrderItem() {
 	}
 
-	public OrderItem(Integer quantity, Double price, String product) {
+	public OrderItem(Integer quantity, Double price, Product product) {
 		this.quantity = quantity;
 		this.price = price;
-		this.setProduct(product);
+		this.product = product;
 	}
 
 	public Integer getQuantity() {
@@ -34,12 +35,16 @@ public class OrderItem {
 		return quantity * price;
 	}
 
-	public String getProduct() {
-		return product;
-	}
-
-	public void setProduct(String product) {
-		this.product = product;
+	
+	@Override
+	public String toString() {
+		return  product.getName()
+				+ ", $" 
+				+ String.format("%.2f", price) 
+				+ ", Quantity: " 
+				+ quantity + 
+				", Subtotal: $" 
+				+ String.format("%.2f", subTotal());
 	}
 	
 }

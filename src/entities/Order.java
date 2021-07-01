@@ -71,12 +71,14 @@ public class Order {
 		sb.append(sdf.format(moment) + "\n");
 		sb.append("Order status: ");
 		sb.append(status + "\n");
-		sb.append("Cliente: " + client + "\n");
+		sb.append("Client: ");
+		sb.append(client + "\n");
 		sb.append("Order item: ");
 		for (OrderItem item : items) {
 			sb.append(item + "\n");
 		}
-		sb.append("Total price: $" + String.format("%.2f", total()));
+		sb.append("Total price: $");
+		sb.append(String.format("%.2f", total()));
 		return sb.toString();
 	}
 	

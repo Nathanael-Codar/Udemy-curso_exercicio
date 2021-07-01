@@ -63,14 +63,14 @@ public class Program {
 			
 			spaceLine();
 			
-			OrderItem orderItem = new OrderItem(quantity, productPrice, productName);
+			OrderItem orderItem = new OrderItem(quantity, productPrice, product);
 			
 			order.addItem(orderItem);
 		}
 		
 		System.out.println();
 		System.out.println("ORDER SUMMARY:");
-		System.out.println(order.toString());
+		System.out.println(order);
 		
 		sc.close();
 	}
