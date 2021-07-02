@@ -10,7 +10,7 @@ import entities.Client;
 import entities.Order;
 import entities.OrderItem;
 import entities.Product;
-import entities.enuns.OrderStatus;
+import entities.enums.OrderStatus;
 
 public class Program {
 
